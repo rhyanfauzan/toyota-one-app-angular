@@ -40,3 +40,21 @@ mat-icon {
     transform: translateX(0%); /* Settle into place */
   }
 }
+
+.card-announcement {
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  background-color: #fafafa;
+  box-shadow: 0px 4px 10px rgba(44, 44, 44, 0.15); /* Shadow effect */
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.font-desc {
+  color: #757575;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

@@ -76,6 +76,7 @@
 
 .menu-item:hover {
   background-color: #f0f0f0; /* Light grey background on hover, adjust as needed */
+  color: #252525;
 }
 
 .text-menu {
