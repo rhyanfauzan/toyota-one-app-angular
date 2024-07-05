@@ -1,0 +1,84 @@
+<app-navbar-top-component></app-navbar-top-component>
+
+<app-carousel-component [imageUrls]="imageUrls"></app-carousel-component>
+
+<div class="container-fluid pt-4">
+  <div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-10 bg-primary rounded">
+      <h5 class="text-white mt-1 text-left pt-2 welcome-text">
+        Welcome To One App Portal,
+        <span class="fw-medium">{{ User.name }} </span> !
+      </h5>
+    </div>
+    <div class="col-md-1"></div>
+  </div>
+</div>
+
+<div class="container-fluid pt-4">
+  <div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
+      <h2 class="text-dark mt-3 text-center fw-medium">Application List</h2>
+    </div>
+    <div class="col-md-1"></div>
+  </div>
+</div>
+
+<!-- Search Bar -->
+<div class="container-fluid my-3">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <mat-form-field class="w-100 search-bar" appearance="outline">
+        <mat-icon matPrefix>search</mat-icon>
+        <input
+          matInput
+          placeholder="Search"
+          [(ngModel)]="searchAppTitle"
+          (input)="onSearch()"
+        />
+      </mat-form-field>
+    </div>
+  </div>
+</div>
+
+<!--APPLIST CONTENT-->
+<div class="container-fluid applist-container">
+  <div class="container py-4">
+    <div class="row justify-content-center g-1">
+      <div
+        class="col-6 col-md-3 col-lg-2 mb-3"
+        *ngFor="let card of filteredCards"
+      >
+        <app-appcardlist-component
+          [imageUrl]="card.imageUrl"
+          [title]="card.title"
+          [description]="card.description"
+          (loginClicked)="handleLoginClick(card.title, card.redirectUrl)"
+        >
+        </app-appcardlist-component>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid pb-4">
+  <div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
+      <h2 class="text-dark mt-3 text-lrft fw-medium">Announcement</h2>
+    </div>
+    <div class="col-md-1"></div>
+  </div>
+</div>
+
+<div class="container-fluid pb-4 applist-container"></div>
+
+<!--FOOTER-->
+<app-footer-component></app-footer-component>
+
+<!--OVERLAY-->
+<app-progressbar-component
+  [isLoading]="isLoading"
+  [message]="message"
+></app-progressbar-component>

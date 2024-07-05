@@ -1,0 +1,46 @@
+/* Overlay Functions Progress Bar */
+.progress-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 25%;
+    height: auto; /* Adjusted to auto to accommodate variable content height */
+    background: #ffffff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px; /* Added padding for better spacing */
+}
+
+.loading-text {
+    font-weight: bold;
+    color: black;
+    margin: 5px 0; /* Adjusted margins to reduce space */
+    padding-top: 0;
+}
+
+.loading-gif {
+    width: 30%;
+    /* Adjust size as needed */
+    height: auto;
+    /* Maintain aspect ratio */
+    margin-bottom: 10px; /* Reduced margin below the GIF */
+}
+
+mat-progress-bar {
+    width: 80%; /* Adjusted to match the container width better */
+    margin-top: 10px; /* Added margin for spacing */
+}
+
+.lottie-animation {
+    width: auto;
+    height: 130px;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 0px; /* Reduced margin below the animation */
+}

@@ -1,0 +1,37 @@
+/* styles.css */
+
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set height for html and body to 100% */
+html,
+body {
+  height: 100%;
+}
+
+/* Ensure app-root takes full viewport height */
+app-root {
+  display: block;
+  min-height: 100vh; /* Use min-height: 100vh for full viewport height */
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.bg-primary {
+  background-color: #ea1225 !important; /* Bootstrap's default danger color */
+}
+
+.bg-gradient-primary-dark {
+  background-image: linear-gradient(to right, #ea1225 10%, #252525 80%);
+}

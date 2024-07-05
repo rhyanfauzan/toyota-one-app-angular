@@ -1,0 +1,71 @@
+<app-navbar-top-component></app-navbar-top-component>
+
+<div class="container mt-4">
+    <h2 class="font-weight-bold">User Creation</h2>
+
+    <!-- Form -->
+    <form [formGroup]="userForm" (ngSubmit)="onSubmit()" class="user-form">
+        <!-- STAFF INFORMATION Section -->
+        <h5>STAFF INFORMATION</h5>
+        <div class="form-row">
+            <mat-form-field class="form-field">
+                <input matInput placeholder="Staff ID" formControlName="staffId">
+            </mat-form-field>
+            <mat-form-field class="form-field">
+                <mat-label>Designation</mat-label>
+                <mat-select formControlName="designation">
+                    <mat-option value="Option 1">Option 1</mat-option>
+                    <mat-option value="Option 2">Option 2</mat-option>
+                    <!-- Add more options as needed -->
+                </mat-select>
+            </mat-form-field>
+        </div>
+
+        <div class="form-row">
+            <mat-form-field class="form-field">
+                <mat-label>Division</mat-label>
+                <mat-select formControlName="division">
+                    <mat-option value="Division A">Division A</mat-option>
+                    <mat-option value="Division B">Division B</mat-option>
+                    <!-- Add more options as needed -->
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field class="form-field">
+                <mat-label>Department</mat-label>
+                <mat-select formControlName="department">
+                    <mat-option value="Department X">Department X</mat-option>
+                    <mat-option value="Department Y">Department Y</mat-option>
+                    <!-- Add more options as needed -->
+                </mat-select>
+            </mat-form-field>
+        </div>
+
+        <div class="form-row">
+            <mat-form-field class="form-field">
+                <mat-label>Team</mat-label>
+                <mat-select formControlName="team">
+                    <mat-option value="Team 1">Team 1</mat-option>
+                    <mat-option value="Team 2">Team 2</mat-option>
+                    <!-- Add more options as needed -->
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field class="form-field">
+                <input matInput placeholder="Superior Email" formControlName="superiorEmail">
+            </mat-form-field>
+        </div>
+
+        <div class="row justify-content-end">
+            <div class="col-md-6">
+                <!-- Empty column to align button to the right -->
+            </div>
+            <div class="col-md-6">
+                <button mat-button type="submit" class="btn btn-danger float-end">Submit</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<!--OVERLAY-->
+<app-alert-component [isLoading]="isLoading" [message]="message"></app-alert-component>
+
+<app-footer-component></app-footer-component>

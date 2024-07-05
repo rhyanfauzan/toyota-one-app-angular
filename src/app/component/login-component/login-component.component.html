@@ -1,0 +1,23 @@
+<div class="login-container">
+    <div class="login-form">
+        <img src="assets/images/toyota.png" alt="Logo" class="logo">
+        <h4 class="fw-bold">OneApp Portal</h4>
+        <form [formGroup]="loginForm" (ngSubmit)="onLoginSubmit()">
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" formControlName="email" required>
+                <div *ngIf="loginForm?.get('email')?.errors?.['required'] && loginForm?.get('email')?.touched">
+                    Email is required
+                </div>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" formControlName="password" required>
+                <div *ngIf="loginForm?.get('password')?.errors?.['required'] && loginForm?.get('password')?.touched">
+                    Password is required
+                </div>
+            </div>
+            <button type="submit" class="btn btn-danger">Login</button>
+        </form>
+    </div>
+</div>

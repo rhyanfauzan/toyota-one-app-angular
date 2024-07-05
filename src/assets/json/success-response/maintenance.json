@@ -1,0 +1,8 @@
+{
+    "responseCode": 200,
+    "status": true,
+    "message": "OK",
+    "data": {
+        "maintenance" : false
+    }
+}

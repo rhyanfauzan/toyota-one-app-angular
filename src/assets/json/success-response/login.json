@@ -1,0 +1,13 @@
+{
+    "responseCode": 200,
+    "status": true,
+    "message": "Login Successfully !",
+    "data": {
+        "token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c",
+        "user"  : {
+            "id"    : 1,
+            "email" : "rikim@toyota.com.my",
+            "name"  : "Riki Ahmad Maulana"
+        }
+    }
+}
